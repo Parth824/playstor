@@ -19,6 +19,9 @@ class _HomaPageState extends State<HomaPage> {
           index: k,
           children: [
             Apps_page(),
+            Apps_page(),
+            Apps_page(),
+            Apps_page(),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(

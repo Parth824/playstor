@@ -62,17 +62,19 @@ class _App_comState extends State<App_com> {
                           ),
                         ),
                         Container(
-                          height: 57,
+                          height: 60,
                           width: 100,
                           child: Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  "${e['n']}",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    // fontWeight: FontWeight.bold,
+                                Expanded(
+                                  child: Text(
+                                    "${e['n']}",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      // fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
                                 Text(
@@ -144,10 +146,12 @@ class _App_comState extends State<App_com> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    "${e['n']}",
-                                    style: TextStyle(
-                                      fontSize: 12,
+                                  Expanded(
+                                    child: Text(
+                                      "${e['n']}",
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                      ),
                                     ),
                                   ),
                                   Text(
@@ -240,10 +244,12 @@ class _App_comState extends State<App_com> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    "${e['n']}",
-                                    style: TextStyle(
-                                      fontSize: 12,
+                                  Expanded(
+                                    child: Text(
+                                      "${e['n']}",
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                      ),
                                     ),
                                   ),
                                   Text(

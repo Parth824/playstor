@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:paly_sotre/view/compoend/Apps_compoends.dart';
+import 'package:paly_sotre/view/compoend/drew.dart';
 import 'package:paly_sotre/view/compoend/topchars.dart';
 
 class Apps_page extends StatefulWidget {
@@ -23,18 +24,32 @@ class _Apps_pageState extends State<Apps_page>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: dr_com(),
       appBar: AppBar(
+        leading: Icon(Icons.abc,size: 0,),
         elevation: 1,
         toolbarHeight: 75,
         backgroundColor: Colors.white,
         // toolbarHeight: 150,
+        centerTitle: true,
         title: Container(
           child: TextFormField(
             decoration: InputDecoration(
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
-              prefixIcon: Icon(Icons.menu),
+              prefixIcon: Builder(
+                builder: (context) {
+                  return GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        Scaffold.of(context).openDrawer();
+                      });
+                    },
+                    child: Icon(Icons.menu),
+                  );
+                }
+              ),
               hintText: "Search for appps & games",
               hintStyle: TextStyle(
                 fontSize: 14,
@@ -67,11 +82,13 @@ class _Apps_pageState extends State<Apps_page>
           ],
         ),
       ),
-      body:TabBarView(
+      body: TabBarView(
         controller: controller,
         children: [
           App_com(),
           topchar_com(),
+          Text("Page3"),
+          Text("Page4"),
         ],
       ),
     );
